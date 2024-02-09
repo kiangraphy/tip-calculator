@@ -47,7 +47,7 @@ section.container {
     width: 100vw; /*New statement learned*/
     display: flex;
     flex-direction: column; /*New statement learned*/ 
-    transition: all 0.2s linear; /*New statement learned*/ 
+    transition: all 0.2s linear; /*New statement learned*/ /*New statement learned*/
 }
 
 /* Left section */
