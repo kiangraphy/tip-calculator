@@ -9,21 +9,53 @@
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
-  <main class="container">
+  <main>
     <img src="/images/logo.svg" alt="">
 
     <section class="sectionContainer">
       <!-- left section -->
+      <!-- Bill form -->
       <article class="inputContainer">
         <form action="" class="amountInput">
           <label for="billAmount">Bill</label>
-          <input type="number" class="inputBill" >
+          <input type="number" class="inputBill">
         </form>
+        <!-- Tip buttons -->
+        <form action="" class="selectTip">
+          <label for="">Select Tip %</label>
+          <div class="percentageOptions">
+            <button class="button5" type="button" aria-label="add-5-percentage">5</button>
+            <button class="button10" type="button" aria-label="add-10-percentage">10</button>
+            <button class="button15" type="button" aria-label="add-15-percentage">15</button>
+            <button class="button25" type="button" aria-label="add-25-percentage">25</button>
+            <button class="button50" type="button" aria-label="add-50-percentage">50</button>
+            <input id="custom" class="custom-percentage" type="number" max="100" placeholder="Custom"
+              aria-label="enter-custom-input" />
+          </div>
+        </form>
+
+
+        <form action="" class="numberPeople">
+          <label for="people-count">Number of People <span>Can't be zero</span></label>
+          <input class="input-field" type="number" name="number-people" id="people-count" placeholder="0"
+            aria-label="enter-number-of-people" required aria-required="true" min="0" max="100" />
+        </form>
+      </article>
+
+
+      <!-- Right Section -->
+      <article class="displayContainer">
+        <div class="displayTip">
+          <div>
+            <p class="displayDescription">Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <p class="amountShowTip">₱0.00</p>
+        </div>
+        <buttton class="resetButton" aria-label="reset" disabled>Reset</buttton>
       </article>
     </section>
   </main>
-
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
