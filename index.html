@@ -6,19 +6,21 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
   <main>
-    <img src="/images/logo.svg" alt="">
+    <img src="/images/logo.svg" alt="" id="logo">
 
-    <section class="sectionContainer">
+    <section class="container">
       <!-- left section -->
       <!-- Bill form -->
       <article class="inputContainer">
         <form action="" class="amountInput">
           <label for="billAmount">Bill</label>
-          <input type="number" class="inputBill">
+          <input class="input-field" type="number" name="amount" id="bill-amount" placeholder="0"
+            aria-label="bill-amount" min="0" />
         </form>
         <!-- Tip buttons -->
         <form action="" class="selectTip">
@@ -50,16 +52,30 @@
             <p class="displayDescription">Tip Amount</p>
             <p>/ person</p>
           </div>
-          <p class="amountShowTip">₱0.00</p>
+          <p class="amount ShowTip">$0.00</p>
         </div>
-        <buttton class="resetButton" aria-label="reset" disabled>Reset</buttton>
+
+        <div class="displayTotal">
+          <div>
+            <p class="displayDescription">Total</p>
+            <p>/ person</p>
+          </div>
+          <p class="amount ShowTotal">$0.00</p>
+        </div>
+        <button class="resetButton" aria-label="reset" disabled>reset
+        </button>
       </article>
     </section>
   </main>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  
+  <footer>
+    <!-- Credits -->
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+
 
   <script src="/app.js"></script>
 
