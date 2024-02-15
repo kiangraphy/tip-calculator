@@ -1,10 +1,11 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+
 /* Global variables */
 :root {
     /* Primary Color */
     --Strong-cyan: hsl(172, 67%, 45%);
-    /* Neutral */
     --Very-dark-cyan: hsl(183, 100%, 15%);
     --Dark-grayish-cyan-2: hsl(186, 14%, 43%);
     --Dark-grayish-cyan-1: hsl(184, 14%, 56%);
@@ -116,7 +117,138 @@ form .input-field {
 
 form.amountInput::before /*New statement learned*/ {
     display: inline-block;
-    font-family: "Font Awesome 5 Free";
-    content: "\f155";
+    font-family: "Font Awesome 6 Free"; 
+    content: "\e222";
     font-weight: 700;
+}
+
+form.numberPeople::before {
+    display: inline-block;
+    font-family: "Font Awesome 6 Free";
+    content: "\f007";
+    font-weight: 700;
+}
+
+/* Tip */
+.percentageOptions > button, .custom-percentage /*New statement learned*/ 
+{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Space Mono", "Courier New", monospace;
+    font-weight: bold;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.percentageOptions > button {
+    color: var(--Dark-grayish-cyan-1);
+    background-color: var(--Very-dark-cyan);
+    letter-spacing: 1.2px;
+}
+
+.percentageOptions > button::after /*Nee statement learned*/ {
+    content: "%";
+}
+
+.percentageOptions > button:hover {
+    background-color: var(--Light-grayish-cyan-2);
+    color: var(--Very-dark-cyan);
+    transition:  all 0.2s linear;
+}
+
+/* enable on click */
+.percent-options > button.click {
+    background-color: var(--Strong-cyan);
+}
+
+.custom-percentage {
+    width: 100%;
+    text-align: center;
+    background-color: var(--Light-grayish-cyan-1);
+    color: var(--Dark-grayish-cyan-2);
+}
+
+
+/* right section */
+article.displayContainer {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 10px;
+    margin-top: 5%;
+    padding: 1.1rem;
+}
+
+.displayDescription {
+    color: var(--Light-grayish-cyan-1);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.displayContainer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0px;
+}
+
+p:not(.amount, .displayDescription) {
+    color: var(--Dark-grayish-cyan-1);
+}
+
+p.amount {
+    color: var(--Strong-cyan);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* reset button */
+button.resetButton {
+    max-width: 100%;
+    width: 100%;
+    padding: 5px;
+    font-family: "Space Mono", "Courier New", monospace;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+button.resetButton:enabled {
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+}
+
+button.resetButton:hover {
+    background-color: var(--Light-grayish-cyan-2);
+    transition: all 0.3s linear;
+}
+
+footer {
+    display: none;
+}
+
+/* mobile display */
+@media screen and (min-width: 768px) {
+    body {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    #logo {
+        margin-top: 0px;
+    }
+
+    section.container {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 850px;
+        width: 95%;
+        border-radius: 20px;
+        padding: 2rem;
+        height: auto;
+        margin: 0 auto;
+    }
+
 }
