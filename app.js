@@ -4,14 +4,14 @@
 const inputBill = document.getElementById("bill-amount");
 const inputPeople = document.getElementById("people-count");
 const inputCustom = document.querySelector(".custom-percentage");
-const btn_5 = document.querySelector(".btn_5");
-const btn_10 = document.querySelector(".btn_10");
-const btn_15 = document.querySelector(".btn_15");
-const btn_25 = document.querySelector(".btn_25");
-const btn_50 = document.querySelector(".btn_50");
-const btnReset = document.querySelector(".reset-btn");
-const showTip = document.querySelector(".show-tip");
-const showTotal = document.querySelector(".show-total");
+const btn_5 = document.querySelector(".button5");
+const btn_10 = document.querySelector(".button10");
+const btn_15 = document.querySelector(".button15");
+const btn_25 = document.querySelector(".button25");
+const btn_50 = document.querySelector(".button50");
+const btnReset = document.querySelector(".resetButton");
+const showTip = document.querySelector(".ShowTip");
+const showTotal = document.querySelector(".ShowTotal");
 const showWarning = document.querySelector("label span");
 
 let billAmount, numPeople, customPercent, tipTotal, tipPerson, totalPerson;
